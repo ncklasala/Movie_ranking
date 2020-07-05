@@ -1,0 +1,19 @@
+{
+  "name": "movie_ranking",
+  "version": "1.0.0",
+  "description": "Practice prjoect",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncklasala/Movie_ranking.git"
+  },
+  "author": "Nick La Sala",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ncklasala/Movie_ranking/issues"
+  },
+  "homepage": "https://github.com/ncklasala/Movie_ranking#readme"
+}
