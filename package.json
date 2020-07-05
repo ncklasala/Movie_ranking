@@ -4,6 +4,11 @@
   "description": "Practice prjoect",
   "main": "index.js",
   "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +20,27 @@
   "bugs": {
     "url": "https://github.com/ncklasala/Movie_ranking/issues"
   },
-  "homepage": "https://github.com/ncklasala/Movie_ranking#readme"
+  "homepage": "https://github.com/ncklasala/Movie_ranking#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "babel-cli": "^6.26.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.2.0",
+    "express": "^4.17.1",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.27.0",
+    "mongoose": "^5.9.21",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "react-bootstrap": "^1.0.1",
+    "react-modal": "^3.11.2",
+    "react-moment": "^0.9.7",
+    "react-router-dom": "^5.2.0",
+    "validator": "^13.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
