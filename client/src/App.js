@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import GuestLanding from "./components/layout/GuestLanding";
 import Register from "./components/users/Register";
+import Login from "./components/users/Login";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
@@ -35,8 +36,22 @@ function App() {
       <Router>
         <div className="App">
           <header className="App-header">
-            <GuestLanding />
-            <Route exact path="/register" component={Register} />
+            <div className="landing">
+              <div className="dark-overlay landing-inner text-light">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-md-12 text-center">
+                      <h1 className="display-3 mb-4">Movie Ranking App</h1>
+                      <hr />
+
+                      <Route exact path="/" component={GuestLanding} />
+                      <Route exact path="/register" component={Register} />
+                      <Route exact path="/login" component={Login} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </header>
         </div>
       </Router>
