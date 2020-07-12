@@ -2,7 +2,7 @@
   "name": "movie_ranking",
   "version": "1.0.0",
   "description": "Practice prjoect",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
     "start": "node server.js",
