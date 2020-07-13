@@ -6,24 +6,31 @@ I was ranking each movie from best to worst, and maintianing this list on a spre
 I was unaware of letterbox at the time.
 I am doing this a way to practice react.
 
-TODO:
-Phase 1:
+DONE:
 
 1. Set up server
 2. User registration
    2.1) Determine what is required for user
    2.2) basic user interface for sign up and login (react)
 3. Profile Registration
-   3.1) Determine what is required for profile
-4. Allow user to create thier list
-   4.1) create movie object
+   3.1) Created backend for profile creation
+4. In phase 1 i decide to treat the movie list as an attribute for the profile, This may get changed later. For now movie object is nixed
+
+TODO:
+Phase 1:
+
+5. Profile Registration
+   5.1) create front end for profile creation and edit
+6. Allow user to create thier list
+   4.1) create movie object // defered
    4.2) moviedb api connection for info about movie
    4.3) allow for migration from csv
    4.4) cross platform data entry with googlesheets
    4.5) edit lists with ease (This is important to be better then google sheets)
+   4.6) create front end for displaying list
 
    Phase 2:
 
-5. multiple lists per user
-6. friends list
-7. list rankings
+7. multiple lists per user
+8. friends list
+9. list rankings
