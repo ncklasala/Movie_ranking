@@ -8,6 +8,8 @@ const passport = require("passport");
 
 //Load validation Files
 const validateProfileInput = require("../../validation/profile");
+const validateMovieListInput = require("../../validation/movie-list");
+
 const Profile = require("../../models/Profile");
 
 const User = require("../../models/User");
@@ -154,7 +156,7 @@ router.post(
 // @access Private
 
 router.post(
-  "/movieList",
+  "/movielist",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
     const { errors, isValid } = validateMovieListInput(req.body);
