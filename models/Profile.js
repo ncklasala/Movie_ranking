@@ -13,6 +13,9 @@ const ProfileSchema = new Schema({
     required: true,
     max: 40,
   },
+  location: {
+    type: String,
+  },
   favoriteGenres: {
     type: [String],
     required: true,
@@ -20,14 +23,18 @@ const ProfileSchema = new Schema({
   bio: {
     type: String,
   },
-  experience: [
+  movieList: [
     {
       title: { type: String, required: true },
-      company: { type: String, required: true },
-      location: { type: String },
-      from: { type: Date, required: true },
-      to: { type: Date },
-      current: { type: Boolean, default: false },
+      genre: { type: [String] },
+      director: { type: String },
+      runtime: { type: String },
+      poster: { type: String },
+      series: { type: String },
+      cast: { type: [String] },
+      imdbId: { type: String },
+      tmbdId: { type: String },
+      release: { type: Date },
       description: { type: String },
     },
   ],

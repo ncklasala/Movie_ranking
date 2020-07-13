@@ -28,7 +28,7 @@ require("./config/passport")(passport);
 
 //Use Routes
 app.use("/api/users", user);
-// app.use("/api/profile", profile);
+app.use("/api/profile", profile);
 // app.use("/api/list", list);
 
 // serve static in prod
