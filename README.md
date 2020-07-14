@@ -14,7 +14,8 @@ DONE:
    2.2) basic user interface for sign up and login (react)
 3. Profile Registration
    3.1) Created backend for profile creation
-4. In phase 1 i decide to treat the movie list as an attribute for the profile, This may get changed later. For now movie object is nixed
+   3.2) log out
+4. In phase 1 I decide to treat the movie list as an attribute for the profile, This may get changed later. For now movie object is nixed
 
 TODO:
 Phase 1:

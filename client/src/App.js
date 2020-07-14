@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import GuestLanding from "./components/layout/GuestLanding";
+import Landing from "./components/layout/Landing";
 import Register from "./components/users/Register";
 import Login from "./components/users/Login";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -9,6 +10,8 @@ import setAuthToken from "./utils/setAuthToken";
 import { Provider } from "react-redux";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { clearCurrentProfile } from "./actions/profileActions";
+import PrivateRoute from "./components/common/PrivateRoute";
+import CreateProfile from "./components/profiles/CreateProfile";
 import store from "./store";
 import "bootstrap/dist/css/bootstrap.min.css";
 //check for token
@@ -44,9 +47,17 @@ function App() {
                       <h1 className="display-3 mb-4">Movie Ranking App</h1>
                       <hr />
 
-                      <Route exact path="/" component={GuestLanding} />
+                      <Route exact path="/" component={Landing} />
                       <Route exact path="/register" component={Register} />
                       <Route exact path="/login" component={Login} />
+
+                      <Switch>
+                        <PrivateRoute
+                          exact
+                          path="/create-profile"
+                          component={CreateProfile}
+                        />
+                      </Switch>
                     </div>
                   </div>
                 </div>

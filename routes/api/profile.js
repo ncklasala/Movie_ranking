@@ -43,7 +43,7 @@ router.get(
 // @route GET api/profile/screenName/:screenname
 // @desc Get users profile by handle
 // @access Public
-router.get("/screenName/:screenName", (req, res) => {
+router.get("/screenname/:screenName", (req, res) => {
   const errors = {};
   Profile.findOne({ handle: req.params.handle })
     .populate("user", ["name", "avatar"])
@@ -156,7 +156,7 @@ router.post(
 // @access Private
 
 router.post(
-  "/movielist",
+  "/movie-list",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
     const { errors, isValid } = validateMovieListInput(req.body);
@@ -190,7 +190,7 @@ router.post(
 // @access Private
 
 router.delete(
-  "/movieList/:movie_id/delete",
+  "/movie-list/:movie_id/delete",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
     Profile.findOne({ user: req.user.id })

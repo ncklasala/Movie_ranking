@@ -29,7 +29,7 @@ export const getCurrentProfile = () => (dispatch) => {
 export const createProfile = (profileData, history) => (dispatch) => {
   axios
     .post("/api/profile", profileData)
-    .then((res) => history.push("/dashboard"))
+    .then((res) => history.push("/"))
     .catch((err) =>
       dispatch({
         type: GET_ERRORS,
@@ -37,11 +37,11 @@ export const createProfile = (profileData, history) => (dispatch) => {
       })
     );
 };
-
-export const addExperience = (expData, history) => (dispatch) => {
+// Adds movies to the list
+export const addMovies = (expData, history) => (dispatch) => {
   axios
-    .post("/api/profile/experience", expData)
-    .then((res) => history.push("/dashboard"))
+    .post("/api/profile/movie-list", expData)
+    .then((res) => history.push("/"))
     .catch((err) =>
       dispatch({
         type: GET_ERRORS,
@@ -49,33 +49,10 @@ export const addExperience = (expData, history) => (dispatch) => {
       })
     );
 };
-
-export const deleteExperience = (id) => (dispatch) => {
+// Removes movies from list
+export const deleteMovies = (id) => (dispatch) => {
   axios
-    .delete(`/api/profile/experience/${id}/delete`)
-    .then((res) => dispatch({ type: GET_PROFILE, payload: res.data }))
-    .catch((err) =>
-      dispatch({
-        type: GET_ERRORS,
-        payload: err.response.data,
-      })
-    );
-};
-
-export const addEducation = (eduData, history) => (dispatch) => {
-  axios
-    .post("/api/profile/education", eduData)
-    .then((res) => history.push("/dashboard"))
-    .catch((err) =>
-      dispatch({
-        type: GET_ERRORS,
-        payload: err.response.data,
-      })
-    );
-};
-export const deleteEducation = (id) => (dispatch) => {
-  axios
-    .delete(`/api/profile/education/${id}/delete`)
+    .delete(`/api/profile/movie-list/${id}/delete`)
     .then((res) => dispatch({ type: GET_PROFILE, payload: res.data }))
     .catch((err) =>
       dispatch({
@@ -103,10 +80,10 @@ export const getProfiles = () => (dispatch) => {
     );
 };
 
-export const getProfileByHandle = (handle) => (dispatch) => {
+export const getProfileByScreenName = (screenName) => (dispatch) => {
   dispatch(setProfileLoading());
   axios
-    .get(`/api/profile/handle/${handle}`)
+    .get(`/api/profile/screenname/${screenName}`)
     .then((res) =>
       dispatch({
         type: GET_PROFILE,
