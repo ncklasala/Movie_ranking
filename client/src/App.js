@@ -12,6 +12,7 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { clearCurrentProfile } from "./actions/profileActions";
 import PrivateRoute from "./components/common/PrivateRoute";
 import CreateProfile from "./components/profiles/CreateProfile";
+import EditProfile from "./components/profiles/EditProfile";
 import store from "./store";
 import "bootstrap/dist/css/bootstrap.min.css";
 //check for token
@@ -56,6 +57,13 @@ function App() {
                           exact
                           path="/create-profile"
                           component={CreateProfile}
+                        />
+                      </Switch>
+                      <Switch>
+                        <PrivateRoute
+                          exact
+                          path="/edit-profile"
+                          component={EditProfile}
                         />
                       </Switch>
                     </div>

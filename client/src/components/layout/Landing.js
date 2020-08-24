@@ -45,6 +45,9 @@ class Landing extends Component {
         <Link to="/create-profile" className="btn btn-lg btn-info mr-2">
           Create Profile
         </Link>
+        <Link to="/edit-profile" className="btn btn-lg btn-info mr-2">
+          Edit Profile
+        </Link>
       </ul>
     );
 
