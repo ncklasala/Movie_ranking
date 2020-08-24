@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
-import Search from "../common/Search";
+import SearchResults from "../search/SearchResults";
 import Spinner from "../common/Spinner";
 import {
   clearCurrentProfile,
@@ -34,7 +34,7 @@ class Landing extends Component {
     } else {
       authLinks = (
         <ul navbar-nav ml-auto>
-          <Search />
+          <SearchResults />
 
           <a
             href="/#"
