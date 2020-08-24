@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import Search from "../common/Search";
 import {
   clearCurrentProfile,
   getCurrentProfile,
@@ -60,6 +61,7 @@ class Landing extends Component {
       <div>
         <div className="welcome">
           <p className="lead text-muted">Welcome {user.name}</p>
+          <Search />
         </div>
         {isAuthenticated ? authLinks : guestLinks}
       </div>
