@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import GuestLanding from "./components/layout/GuestLanding";
 import Landing from "./components/layout/Landing";
 import Register from "./components/users/Register";
 import Login from "./components/users/Login";
@@ -13,6 +12,7 @@ import { clearCurrentProfile } from "./actions/profileActions";
 import PrivateRoute from "./components/common/PrivateRoute";
 import CreateProfile from "./components/profiles/CreateProfile";
 import EditProfile from "./components/profiles/EditProfile";
+import NotFound from "./components/layout/NotFound";
 import store from "./store";
 import "bootstrap/dist/css/bootstrap.min.css";
 //check for token
@@ -66,6 +66,7 @@ function App() {
                           component={EditProfile}
                         />
                       </Switch>
+                      <Route exact path="/not-found" component={NotFound} />
                     </div>
                   </div>
                 </div>

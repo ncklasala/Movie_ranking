@@ -1,8 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-// import PropTypes from "prop-types";
-// import { connect } from "react-redux";
-// import Button from "react-bootstrap/Button";
+
 const GuestLanding = (
   <div className="guestlanding">
     <Link to="/register" className="btn btn-lg btn-info mr-2">
