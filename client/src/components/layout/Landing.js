@@ -9,6 +9,7 @@ import {
   getCurrentProfile,
   deleteAccount,
 } from "../../actions/profileActions";
+import GuestLanding from "./GuestLanding";
 class Landing extends Component {
   onLogoutClick(e) {
     e.preventDefault();
@@ -26,6 +27,7 @@ class Landing extends Component {
     const { profile, loading } = this.props.profile;
     const authLinks = (
       <ul navbar-nav ml-auto>
+        <Search />
         <a
           href="/#"
           onClick={this.onLogoutClick.bind(this)}
@@ -45,25 +47,13 @@ class Landing extends Component {
         </Link>
       </ul>
     );
-    const guestLinks = (
-      <div className="guestlanding">
-        <Link to="/register" className="btn btn-lg btn-info mr-2">
-          Sign up
-        </Link>
-
-        <Link to="/login" className="btn btn-lg btn-light">
-          Login
-        </Link>
-      </div>
-    );
 
     return (
       <div>
         <div className="welcome">
           <p className="lead text-muted">Welcome {user.name}</p>
-          <Search />
         </div>
-        {isAuthenticated ? authLinks : guestLinks}
+        {isAuthenticated ? authLinks : GuestLanding}
       </div>
     );
   }
