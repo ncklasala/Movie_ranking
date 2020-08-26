@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
-import SearchResults from "../search/SearchResults";
+import Search from "../search/Search";
 import Spinner from "../common/Spinner";
 import {
   clearCurrentProfile,
@@ -34,7 +34,7 @@ class Landing extends Component {
     } else {
       authLinks = (
         <ul navbar-nav ml-auto>
-          <SearchResults />
+          <Search />
 
           <a
             href="/#"
@@ -56,9 +56,14 @@ class Landing extends Component {
 
       if (Object.keys(profile).length > 0) {
         profileOption = (
-          <Link to="/edit-profile" className="btn btn-lg btn-info mr-2">
-            Edit Profile
-          </Link>
+          <div>
+            <Link to="/edit-profile" className="btn btn-lg btn-info mr-2">
+              Edit Profile
+            </Link>
+            <Link to="/movie-search" className="btn btn-lg btn-info mr-2">
+              Movie Search
+            </Link>
+          </div>
         );
       } else {
         profileOption = (

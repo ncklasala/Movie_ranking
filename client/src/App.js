@@ -12,6 +12,7 @@ import { clearCurrentProfile } from "./actions/profileActions";
 import PrivateRoute from "./components/common/PrivateRoute";
 import CreateProfile from "./components/profiles/CreateProfile";
 import EditProfile from "./components/profiles/EditProfile";
+import Search from "./components/search/Search";
 import NotFound from "./components/layout/NotFound";
 import store from "./store";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -51,7 +52,7 @@ function App() {
                       <Route exact path="/" component={Landing} />
                       <Route exact path="/register" component={Register} />
                       <Route exact path="/login" component={Login} />
-
+                      <Route exact path="/movie-search" component={Search} />
                       <Switch>
                         <PrivateRoute
                           exact
