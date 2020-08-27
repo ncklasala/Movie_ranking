@@ -4,11 +4,19 @@ const SearchResults = (props) => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col m12">
-          {props.movies.map((movie, i) => {
-            return <Movie key={i} image={movie.poster_path} />;
-          })}
-        </div>
+        {props.movies.map((movie, i) => {
+          return (
+            <div className="col col-lg-4">
+              {" "}
+              <Movie
+                key={i}
+                image={movie.poster_path}
+                title={movie.title}
+                overview={movie.overview}
+              />{" "}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
