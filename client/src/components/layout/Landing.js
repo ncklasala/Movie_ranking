@@ -34,13 +34,17 @@ class Landing extends Component {
     } else {
       authLinks = (
         <ul navbar-nav ml-auto>
-          <Search />
-
           <a
             href="/#"
             onClick={this.onLogoutClick.bind(this)}
             className="nav-link"
-          >
+          ></a>
+        </ul>
+      );
+
+      if (Object.keys(profile).length > 0) {
+        profileOption = (
+          <div>
             <img
               src={user.avatar}
               alt={user.name}
@@ -48,28 +52,30 @@ class Landing extends Component {
               style={{ width: "25px", marginRight: "5px" }}
               title="You must have gravtar"
             />
-
-            <div className="btn btn-lg btn-danger">Logout</div>
-          </a>
-        </ul>
-      );
-
-      if (Object.keys(profile).length > 0) {
-        profileOption = (
-          <div>
             <Link to="/edit-profile" className="btn btn-lg btn-info mr-2">
               Edit Profile
             </Link>
             <Link to="/movie-search" className="btn btn-lg btn-info mr-2">
               Movie Search
             </Link>
+            <div className="btn btn-lg btn-danger">Logout</div>
           </div>
         );
       } else {
         profileOption = (
-          <Link to="/create-profile" className="btn btn-lg btn-info mr-2">
-            Create Profile
-          </Link>
+          <div className="newProfile">
+            <img
+              src={user.avatar}
+              alt={user.name}
+              className="rounded-circle"
+              style={{ width: "25px", marginRight: "5px" }}
+              title="You must have gravtar"
+            />
+            <Link to="/create-profile" className="btn btn-lg btn-info mr-2">
+              Create Profile
+            </Link>
+            <div className="btn btn-lg btn-danger">Logout</div>
+          </div>
         );
       }
     }

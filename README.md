@@ -16,19 +16,19 @@ DONE:
    3.1) Created backend for profile creation
    3.2) log out
 4. In phase 1 I decide to treat the movie list as an attribute for the profile, This may get changed later. For now movie object is nixed
+5. Profile Registration
+   5.1) create front end for profile creation and edit
 
 TODO:
 Phase 1:
 
-5. Profile Registration
-   5.1) create front end for profile creation and edit
 6. Allow user to create thier list
-   4.1) create movie object // defered
-   4.2) moviedb api connection for info about movie
-   4.3) allow for migration from csv
-   4.4) cross platform data entry with googlesheets
-   4.5) edit lists with ease (This is important to be better then google sheets)
-   4.6) create front end for displaying list
+   6.1) create movie object
+   6.2) moviedb api connection for info about movie
+   6.3) allow for migration from csv
+   6.4) cross platform data entry with googlesheets
+   6.5) edit lists with ease (This is important to be better then google sheets)
+   6.6) create front end for displaying list
 
    Phase 2:
 
