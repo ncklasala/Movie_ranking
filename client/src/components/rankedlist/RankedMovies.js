@@ -35,7 +35,11 @@ class RankedMovies extends Component {
   render() {
     const movies = this.state.rankedMovies.map((movie) => (
       <tr key={movie._id}>
+        <td>{movie.poster}</td>
         <td>{movie.title}</td>
+        <td>{movie.release}</td>
+        <td>{movie.director}</td>
+        <td>{movie.genre}</td>
         <td>{movie.cast}</td>
         <td>{movie.descripition}</td>
         <td>
@@ -54,7 +58,11 @@ class RankedMovies extends Component {
         <table className="table">
           <thead>
             <tr>
+              <th>Poster</th>
               <th>Title</th>
+              <th>Release</th>
+              <th>Director</th>
+              <th>Genre</th>
               <th>Cast</th>
               <th>Description</th>
               <th></th>
