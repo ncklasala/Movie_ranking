@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import Search from "../search/Search";
+import RankedMovies from "../rankedlist/RankedMovies";
 import Spinner from "../common/Spinner";
 import {
   clearCurrentProfile,
@@ -42,11 +43,15 @@ class Landing extends Component {
               style={{ width: "25px", marginRight: "5px" }}
               title="You must have gravtar"
             />
+            {/* <RankedMovies movieList={profile.movieList} /> */}
             <Link to="/edit-profile" className="btn btn-lg btn-info mr-2">
               Edit Profile
             </Link>
             <Link to="/movie-search" className="btn btn-lg btn-info mr-2">
               Movie Search
+            </Link>
+            <Link to="/ranked-list" className="btn btn-lg btn-info mr-2">
+              Ranked List
             </Link>
             <a
               href="/#"

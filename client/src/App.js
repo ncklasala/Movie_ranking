@@ -13,6 +13,7 @@ import PrivateRoute from "./components/common/PrivateRoute";
 import CreateProfile from "./components/profiles/CreateProfile";
 import EditProfile from "./components/profiles/EditProfile";
 import Search from "./components/search/Search";
+import RankedMovies from "./components/rankedlist/RankedMovies";
 import NotFound from "./components/layout/NotFound";
 import store from "./store";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -53,6 +54,14 @@ function App() {
                       <Route exact path="/register" component={Register} />
                       <Route exact path="/login" component={Login} />
                       <Route exact path="/movie-search" component={Search} />
+                      <Switch>
+                        <PrivateRoute
+                          exact
+                          path="/ranked-list"
+                          component={RankedMovies}
+                        />
+                      </Switch>
+
                       <Switch>
                         <PrivateRoute
                           exact
