@@ -6,7 +6,7 @@ const path = require("path");
 
 const user = require("./routes/api/users");
 const profile = require("./routes/api/profile");
-const list = require("./routes/api/list");
+// const list = require("./routes/api/list");
 const app = express();
 
 //Body Parser Middleware

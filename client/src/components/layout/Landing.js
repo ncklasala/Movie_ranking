@@ -32,16 +32,6 @@ class Landing extends Component {
     if (profile === null || loading) {
       authLinks = <Spinner />;
     } else {
-      authLinks = (
-        <ul navbar-nav ml-auto>
-          <a
-            href="/#"
-            onClick={this.onLogoutClick.bind(this)}
-            className="nav-link"
-          ></a>
-        </ul>
-      );
-
       if (Object.keys(profile).length > 0) {
         profileOption = (
           <div>
@@ -58,7 +48,13 @@ class Landing extends Component {
             <Link to="/movie-search" className="btn btn-lg btn-info mr-2">
               Movie Search
             </Link>
-            <div className="btn btn-lg btn-danger">Logout</div>
+            <a
+              href="/#"
+              onClick={this.onLogoutClick.bind(this)}
+              className="nav-link"
+            >
+              <div className="btn btn-lg btn-danger">Logout</div>
+            </a>
           </div>
         );
       } else {
@@ -74,7 +70,13 @@ class Landing extends Component {
             <Link to="/create-profile" className="btn btn-lg btn-info mr-2">
               Create Profile
             </Link>
-            <div className="btn btn-lg btn-danger">Logout</div>
+            <a
+              href="/#"
+              onClick={this.onLogoutClick.bind(this)}
+              className="nav-link"
+            >
+              <div className="btn btn-lg btn-danger">Logout</div>
+            </a>
           </div>
         );
       }
