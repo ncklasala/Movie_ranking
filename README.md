@@ -25,7 +25,7 @@ Phase 1:
 6. Allow user to create thier list
    6.1) create movie object
    6.2) moviedb api connection for info about movie
-   6.3) allow for migration from csv
+   6.3) allow for migration from csv (Convert csv to Json and store in DB)
    6.4) cross platform data entry with googlesheets
    6.5) edit lists with ease (This is important to be better then google sheets)
    6.6) create front end for displaying list
